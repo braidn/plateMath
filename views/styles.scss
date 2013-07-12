@@ -1,0 +1,39 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+#container {
+	@include outer-container;
+}
+#math {
+	@include span-columns(12);
+	text-align: center;
+	margin: 0 auto;
+}
+#footer {
+	@include outer-container;
+}
+#button {
+	@include button(pill);
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+
+form {
+  input[type="number"] {
+    height: 60px;
+    width: 300px;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+  }
+  label {
+    padding: 20px 0px 0px 0px;
+    font-family: $monospace;
+    font-size: 2em;
+    display: block;
+  }
+}
+
+#{$all-text-inputs-focus} { // Target the :focus pseudo-class
+  background: hsl(209,14%,39%);
+ }
